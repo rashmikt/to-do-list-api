@@ -4,7 +4,7 @@ import pool from './db';
 
 const app: Express = express();
 
-const port: number = 5000;
+const PORT: string | number = process.env.PORT || 5000;
 
 app.use(cors());   //middleware
 app.use(express.json());  //to get req.body
@@ -79,6 +79,6 @@ app.delete("/todos/:id", async (req: Request, res: Response) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Connected successfully at ${port}`);
+app.listen(PORT, () => {
+    console.log(`Connected successfully at ${PORT}`);
 });
