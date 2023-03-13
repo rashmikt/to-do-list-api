@@ -4,6 +4,7 @@ import pool from './db';
 
 const app: Express = express();
 
+
 const PORT: string | number = process.env.PORT || 5000;
 
 app.use(cors());   //middleware
